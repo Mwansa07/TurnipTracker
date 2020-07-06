@@ -1,5 +1,43 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TurnipTracker.Views.TurnipTrackingPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pancakeview="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="TurnipTracker.Views.TurnipTrackingPage"
+             Title="Turnip Prices"
+             Shell.NavBarIsVisible="False">
     <ContentPage.Content>
+        <Grid RowSpacing="12">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <pancakeview:PancakeView CornerRadius="36,36,0,0" Grid.Row="1" Padding="12">
+                <pancakeview:PancakeView.BackgroundGradientStops>
+                    <pancakeview:GradientStopCollection>
+                        <pancakeview:GradientStop Offset="1" Color="#71A8EE"/>
+                        <pancakeview:GradientStop Offset=".66" Color="#3072EB"/>
+                        <pancakeview:GradientStop Offset=".33" Color="#1552C6"/>
+                        <pancakeview:GradientStop Offset="0" Color="#0542A8"/>
+                    </pancakeview:GradientStopCollection>
+                </pancakeview:PancakeView.BackgroundGradientStops>
+                <StackLayout>
+                    <Entry VerticalOptions="CenterAndExpand"
+                           Visual="Material"
+                           Keyboard="Numeric"
+                           BackgroundColor="White"
+                           PlaceholderColor="Blue"
+                           TextColor="Blue"
+                           Placeholder="AM Prices"/>
+                    <Entry VerticalOptions="CenterAndExpand"
+                           Visual="Material"
+                           Keyboard="Numeric"
+                           BackgroundColor="White"
+                           PlaceholderColor="Blue"
+                           TextColor="Blue"
+                           Placeholder="PM Prices"/>
+                </StackLayout>
+
+            </pancakeview:PancakeView>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

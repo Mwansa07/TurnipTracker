@@ -1,7 +1,6 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using TurnipTracker.Services;
 using TurnipTracker.Views;
 
 namespace TurnipTracker
@@ -13,7 +12,6 @@ namespace TurnipTracker
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
         }
 
